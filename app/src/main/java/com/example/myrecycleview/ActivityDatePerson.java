@@ -29,6 +29,7 @@ public class ActivityDatePerson extends AppCompatActivity {
         init();
         Intent intent = getIntent();
         title = (Title) intent.getSerializableExtra(MainActivity.SOME_ITEM);
+        setTitle(title);
     }
     private void init(){
         etName = findViewById(R.id.etName);
@@ -86,6 +87,8 @@ public class ActivityDatePerson extends AppCompatActivity {
         etLastName.setText(title.getLastName());
         etAge.setText(title.getAge());
         etGroup.setText(title.getGroup());
-        imageView.setImageURI(Uri.parse(title.getImageView()));}
+        Uri uri = getIntent().getData();
+        imageView.setImageURI(uri);
+        }
     }
 }

@@ -23,7 +23,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     List<Title> list;
     Context context;
 
-    private OnItemClickListener onItemClickListener;
+    private OnItemClickListener onItemClickListener;;
 
     public MainAdapter(List<Title> list, Context context, OnItemClickListener onItemClickListener){
         this.list = list;

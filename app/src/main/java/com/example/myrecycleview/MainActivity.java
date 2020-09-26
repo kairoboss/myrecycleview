@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity  {
     public MainAdapter adapter;
     Button btnOpen;
     Title title;
+    Title title2;
     public  static  String SOME_ITEM = "someItem";
+    public static  String IMAGE = "image";
 
 
     @Override
@@ -40,8 +42,7 @@ public class MainActivity extends AppCompatActivity  {
                 Toast.makeText(MainActivity.this, "user "+ title1.getName(), Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, ActivityDatePerson.class);
                 i.putExtra(SOME_ITEM, title1);
-                ActivityDatePerson datePerson = new ActivityDatePerson();
-                datePerson.setTitle(title1);
+                i.putExtra(IMAGE, title1.getImageView());
                 startActivity(i);
             }
         };
